@@ -1,0 +1,52 @@
+﻿*{
+    font: 13pt;
+    color: white;
+    font-family: Microsoft YaHei;
+}
+
+QPushButton:focus {
+    padding: -1px;
+    outline: none;
+}
+
+/*
+QScrollBar:horizontal
+{
+    border: 1px solid rgb(36, 102, 178);
+    height: 30px;
+    border-radius: 14px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+QScrollBar::handle:horizontal
+{
+    border: 1px solid rgb(36, 102, 178);
+    border-radius: 14px;
+    padding: 0 8px;
+
+    height: 30px;
+    min-width: 20px;
+    background: rgb(36, 102, 178);
+}
+*/
+
+/*
+QLineEdit {
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 5px;
+    padding: 0 8px;
+    selection-background-color: rgb(210,230,253);
+}
+
+QLineEdit:read-only {
+    background: lightblue;
+    border-color: lightblue;
+}
+
+QLineEdit:disabled {
+    border: 1px solid rgb(100, 100, 100);
+    background: rgba(151, 151, 151, 200);
+    border-radius: 5px;
+    padding: 0 8px;
+}*/

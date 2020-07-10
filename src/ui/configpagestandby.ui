@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ConfigStandbyPage</class>
+ <widget class="QWidget" name="ConfigStandbyPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>885</width>
+    <height>612</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QFrame#topbar {
+	background-color: #1578ba;
+}
+
+QFrame#bottombar {
+	background-color: #f2f2f2;
+	border: 0px solid transparent;
+	border-top: 3px solid qlineargradient(spread:pad, x1:0.539, y1:0.671, x2:0.521955, y2:0.113, stop:0.00568182 rgba(149, 149, 149, 150), stop:0.801136 rgba(210, 210, 210, 150));
+}
+
+QFrame#topbar {
+	max-height: 30px;
+	min-height: 30px;
+}
+
+QPushButton#pushButton {
+	max-height: 50px;
+	min-height: 50px;
+	max-width: 50px;
+	min-width: 50px;
+}
+
+QFrame#frame {
+	border: 0px solid transparent;
+	background-color: white;
+}
+
+QFrame#frame_1,QFrame#frame_2,QFrame#frame_3,QFrame#frame_4,QFrame#frame_5{
+	border: 1px solid transparent;
+	background-color: white;
+}
+
+QFrame#frame_1,QFrame#frame_2,QFrame#frame_3,QFrame#frame_4 {
+	border-bottom: 1px solid rgb(136, 138, 133);
+}
+
+QPushButton#pushButton {
+	border-image: url(:/res/icons/ic_cancel_2.png);
+}
+
+QPushButton#button_5, QPushButton#button_10,  QPushButton#button_15,
+QPushButton#button_7, QPushButton#button_3, QPushButton#button_close {
+	background-color: rgb(114, 159, 207);
+	max-width: 400;
+	min-width: 100;
+	max-height: 100;
+	min-height: 50;
+	/*border: 2px solid rgb(46, 52, 54);*/
+	border: 0px solid transparent;
+	border-radius: 5px;
+}
+
+QPushButton#button_5:checked, QPushButton#button_10:checked,  QPushButton#button_15:checked,
+QPushButton#button_3:checked, QPushButton#button_7:checked, QPushButton#button_close:checked {
+	background-color: rgb(52, 101, 164);
+	/*border: 2px solid rgb(46, 52, 54);*/
+	border: 0px solid transparent;
+	border-radius: 5px;
+}
+
+QPushButton#button_5:pressed, QPushButton#button_10:pressed,  QPushButton#button_15:pressed,
+QPushButton#button_3:pressed, QPushButton#button_7:pressed, QPushButton#button_close:pressed {
+	background-color: rgb(52, 101, 164);
+	/*border: 2px solid rgb(46, 52, 54);*/
+	border: 0px solid transparent;
+	border-radius: 5px;
+}
+</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QFrame" name="topbar">
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,1">
+      <item>
+       <widget class="QLabel" name="titleLabel">
+        <property name="text">
+         <string>Delay</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>429</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="frame">
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout" stretch="1,1,1,1,1">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>10</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>10</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QFrame" name="frame_1">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QPushButton" name="button_3">
+           <property name="text">
+            <string>3 Minutes</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="button_5">
+           <property name="text">
+            <string>5 Minutes</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame_2">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <item>
+          <widget class="QPushButton" name="button_7">
+           <property name="text">
+            <string>7 Minutes</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="button_10">
+           <property name="text">
+            <string>10 Minutes</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame_3">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_5">
+         <item>
+          <widget class="QPushButton" name="button_15">
+           <property name="text">
+            <string>15 Minutes</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="button_close">
+           <property name="text">
+            <string>Close</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame_4">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_6"/>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame_5">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="bottombar">
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>827</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VSMainWindow</class>
+ <widget class="QStackedWidget" name="VSMainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>799</width>
+    <height>516</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QStackedWidget#MainStackedWidget{
+	background-color: rgb(0, 0, 0);
+}
+
+QFrame#topbar{
+	background-color: rgb(55,160,219,150);
+	border: 0px solid transparent;
+}
+
+QPushButton#button_filebrowser{
+	/*border-image: url(:/res/icons/ic_thumbnail.png);*/
+	min-width: 40px;
+	max-width: 40px;
+	min-height: 40px;
+	max-height: 40px;
+}
+
+QPushButton#button_photo{
+	border-image: url(:/res/icons/ic_photo_unchecked.png);
+}
+
+QPushButton#button_photo:checked{
+	border-image: url(:/res/icons/ic_photo_checked.png);
+}
+
+QPushButton#button_video{
+	border-image: url(:/res/icons/ic_record_unchecked.png);
+}
+
+QPushButton#button_video:checked{
+	border-image: url(:/res/icons/ic_record_checked.png);
+}
+
+QPushButton#button_photo,  QPushButton#button_video {
+	min-width: 60;
+	max-width:60;
+	min-height:60;
+	max-height:60
+}
+
+QPushButton:focus {
+	padding: -1px;
+	outline: none;
+}
+
+QLabel#ledIcon{
+	min-width: 70px;
+	max-width: 70px;
+	min-height: 70px;
+	max-height: 70px;
+	font: 20pt &quot;URW Bookman L&quot;;
+	/*	background-color: rgba(245, 121, 0, 100);*/
+}
+
+QLabel#ledIcon{
+	border-image: url(:/res/icons/ic_LED.png);
+}
+
+QLabel#label_battery{
+	border-image: url(:/res/icons/ic_battery_100.png);
+}
+
+QFrame#widget_filebrowser {
+	border-image: url(:/res/icons/ic_bk.png);
+	min-width: 60px;
+	max-width: 60px;
+	min-height: 60px;
+	max-height: 60px;
+}
+
+QFrame#recordframe {
+	border: 0px solid transparent;
+	background-color: transparent;
+	min-height: 40px;
+	max-height: 40px;
+}
+
+QFrame#recframe {
+	border: 0px solid transparent;
+}
+
+QLabel#timelabel {
+	/*color: rgb(244, 42, 42);*/
+	color: white;
+	font: 20px;
+}
+
+QLabel#label_rec {
+	image: url(:/res/icons/ic_rec.png);
+}
+
+QLabel#label_charge {
+	border-image: url(:/res/icons/ic_charging.png);
+	min-width: 40px;
+	max-width: 40px;
+}
+</string>
+  </property>
+  <widget class="QWidget" name="homepage">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <layout class="QGridLayout" name="gridLayout" columnstretch="1,12">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <item row="0" column="0" colspan="2">
+     <widget class="QFrame" name="topbar">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel#timelabel {
+	color: rgb(255, 255, 255);
+	font: 16pt &quot;WenQuanYi Micro Hei Mono&quot;
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,15,1,0,1">
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="label_time">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="spacer_6">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>616</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_wifi">
+         <property name="minimumSize">
+          <size>
+           <width>30</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>30</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_charge">
+         <property name="minimumSize">
+          <size>
+           <width>40</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>40</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_battery">
+         <property name="minimumSize">
+          <size>
+           <width>40</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>40</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="5" column="0" colspan="2">
+     <widget class="QFrame" name="bottombar">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,0,8,1,8,1,1">
+       <item>
+        <spacer name="spacer_5">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>21</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="button_filebrowser">
+         <property name="minimumSize">
+          <size>
+           <width>42</width>
+           <height>42</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="spacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>192</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="button_photo">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="font">
+          <font>
+           <family>Waree</family>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>ArrowCursor</cursorShape>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="spacer_4">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>193</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="button_video">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="font">
+          <font>
+           <family>Waree</family>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>ArrowCursor</cursorShape>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="spacer_3">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>21</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <spacer name="spacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>270</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="1" column="0" rowspan="4">
+     <widget class="HideFrame" name="hideFrame">
+      <property name="styleSheet">
+       <string notr="true">HideFrame#hideFrame {
+max-width: 200px;
+min-width: 200px;
+background-color: rgba(238, 238, 236,0);
+border-color: rgba(238, 238, 236,0);
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout" stretch="0,15">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>30</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="ledIcon">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="HideSlider" name="ledSlider">
+         <property name="minimumSize">
+          <size>
+           <width>70</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>70</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QSlider{
+	max-width: 70px;
+	min-width: 70px;
+	background: rgba(165, 192,120, 0);
+}
+
+/*
+QSlider::groove{
+	border: 1px solid   rgba(114, 159, 207,50);/*lightblue;*/
+/*	width: 10px;
+	border-radius: 4px;
+	background: rgba(238,238,2,50);
+}
+
+QSlider::add-page {
+	background: qlineargradient(x1:0,y1:0,x2:1,y2:1,stop:0 rgba(32, 92, 160,50), stop:1 rgba(32,92,160,50));
+	border: 1 px solid rgba(32, 92, 160,0);
+	width: 5px;
+}
+
+QSlider::sub-page{
+	background-color: rgba(123,12,143,0);
+	border: 1 px solid rgba(32, 92,160,0);
+	width: 5px;
+}
+
+QSlider::handle{
+	width: 60px;
+	height: 60px;
+	border-image: url(:/res/icons/slider_handle.png);
+	margin: -22px -18px -22px -20px;
+}*/
+
+QSlider::groove {                                 
+	border: 1px solid rgba(114,159,207,0);                                 
+	width: 10px;  
+	border-radius: 4px;                                
+	background: rgba(238,238,2,0);                                 
+}  
+                                                                   
+QSlider::add-page {                                  
+	/*background: qlineargradient(x1:0,y1:0,x2:1,y2:1,stop:0 #1578ba, stop:1 #1578ba); */
+	background: qlineargradient(x1:0,y1:0,x2:1,y2:1,stop:0 rgba(0,0,0,0), stop:1 rgb(0,0,0,0));  
+	border: 1 px solid rgba(32, 92, 160,0);      
+	border-radius: 5px;                               
+	width: 5px;                                 
+} 
+                                                                  
+QSlider::sub-page{                                     
+	background-color: rgb(0,0,0,0);                                      
+	border: 1 px solid rgba(32, 92,160,0);      
+	border-radius: 5px;                                  
+	width: 5px;                                 
+} 
+                                                                  
+QSlider::handle{                                 
+	width: 60px;                                 
+	height: 60px;                                 
+	border-color: rgba(255,255,255,0);                                
+	margin: -18px -18px -18px -20px;                          
+}</string>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QFrame" name="recordframe">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="10,1">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>10</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="timelabel">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="recframe">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="label_rec">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>HideFrame</class>
+   <extends>QFrame</extends>
+   <header>hideframe.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>HideSlider</class>
+   <extends>QSlider</extends>
+   <header location="global">hideframe.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
